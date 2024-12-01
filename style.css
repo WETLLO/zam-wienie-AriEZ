@@ -1,0 +1,205 @@
+/* Resetowanie marginesów i paddingów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Podstawowy styl strony */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Nagłówek */
+header {
+    background: linear-gradient(135deg, #6c63ff, #4a47a3);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #4a47a3;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.info-box p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Styl kontentu głównego */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Box na usługi - kwadraty i prostokąty */
+.service-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolumny na dużych ekranach */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder {
+    background-color: #eaeaea;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #999;
+    border-radius: 10px;
+}
+
+.service-item h2 {
+    font-size: 1.5rem;
+    color: #4a47a3;
+    margin-top: 20px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 15px 0;
+}
+
+/* Styl przycisku do Discorda */
+.btn-discord {
+    background-color: #7289da;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    margin-top: auto;
+}
+
+.btn-discord:hover {
+    background-color: #5a6abf;
+    transform: scale(1.05);
+}
+
+/* Styl dla portfolio */
+.portfolio-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-item .image-placeholder {
+    background-color: #eaeaea;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Styl przycisku do pobrania aplikacji */
+.btn-download {
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.btn-download:hover {
+    background-color: #4a47a3;
+    transform: scale(1.05);
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+    .service-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Styl dla przycisku "Zobacz Portfolio" */
+.btn-portfolio {
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-portfolio:hover {
+    background-color: #4a47a3;
+    transform: scale(1.05);
+}
